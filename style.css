@@ -1,0 +1,22 @@
+.games-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.game-card {
+  background: #202040;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  width: 240px;
+  transition: transform 0.2s;
+}
+.game-card:hover {
+  transform: scale(1.04);
+}
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.tag.godot { background: #3e82e5; color: #fff; padding: 2px 8px; border-radius: 8px; font-size: 0.8em; margin-bottom: 8px; display: inline-block; }
