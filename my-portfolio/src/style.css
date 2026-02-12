@@ -1,0 +1,78 @@
+/* Global reset + base */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #0a0a18;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #f5f5ff;
+}
+
+/* Three.js canvas should fill the screen */
+
+canvas {
+  display: block;
+}
+
+/* We don’t need Vite’s centered #app layout anymore */
+
+#app {
+  position: relative;
+}
+
+/* Links (if you use any later) */
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* UI overlay root */
+
+#ui-root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* 3D scene still clickable */
+}
+
+/* Panel that appears when you click a box */
+
+#panel {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  max-width: 420px;
+  background: rgba(6, 6, 16, 0.9);
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  padding: 1.5rem;
+  color: #f5f5ff;
+  pointer-events: auto;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-size: 14px;
+}
+
+#panel.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+#panel h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #00ffff;
+}
+
+#panel-content {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
