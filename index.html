@@ -1,37 +1,379 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Web Games</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 40px;
-    }
-    iframe {
-      border: none;
-      margin-top: 20px;
-      box-shadow: 0 0 12px #444;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOUR NAME // GAME DEV</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Staatliches&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <h1>My Itch.io Games</h1>
-
-  <iframe
-    src="https://html.itch.zone/html/13352774/Eco_Taxi/index.html"
-    width="960"
-    height="720"
-    frameborder="0"
-    allowfullscreen
-    scrolling="no"
-    allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share">
-  </iframe>
-
-  <p>More games coming soon!</p>
   
+  <!-- Animated background effects -->
+  <div class="bg-container">
+    <div class="bg-grid"></div>
+    <div class="bg-scanlines"></div>
+    <div class="bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="main-container">
+    
+    <!-- Logo/Header -->
+    <div class="header">
+      <div class="logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">GAMEDEV</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <div class="header-tagline">// PIXEL PUSHER & CODE WRITER //</div>
+    </div>
+
+    <!-- Tab Menu Navigation -->
+    <nav class="tab-menu">
+      <button class="tab-btn active" data-page="home">
+        <span class="tab-number">01</span>
+        <span class="tab-text">HOME</span>
+        <div class="tab-corner"></div>
+      </button>
+      <button class="tab-btn" data-page="about">
+        <span class="tab-number">02</span>
+        <span class="tab-text">ABOUT</span>
+        <div class="tab-corner"></div>
+      </button>
+      <button class="tab-btn" data-page="games">
+        <span class="tab-number">03</span>
+        <span class="tab-text">GAMES</span>
+        <div class="tab-corner"></div>
+      </button>
+      <button class="tab-btn" data-page="contact">
+        <span class="tab-number">04</span>
+        <span class="tab-text">CONTACT</span>
+        <div class="tab-corner"></div>
+      </button>
+    </nav>
+
+    <!-- Content Pages -->
+    <div class="content-wrapper">
+      
+      <!-- HOME PAGE -->
+      <div class="page active" id="home">
+        <div class="page-content">
+          <div class="home-hero">
+            <div class="home-title-wrapper">
+              <h1 class="home-title">
+                <span class="title-line-1">MAKING</span>
+                <span class="title-line-2">GAMES</span>
+                <span class="title-line-3">& STUFF</span>
+              </h1>
+              <div class="title-underline"></div>
+            </div>
+            
+            <div class="home-stats">
+              <div class="stat-box">
+                <div class="stat-number">03</div>
+                <div class="stat-label">PROJECTS</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">IDEAS</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">PASSION</div>
+              </div>
+            </div>
+
+            <div class="home-graphic">
+              <div class="graphic-poly poly-pink"></div>
+              <div class="graphic-poly poly-cyan"></div>
+              <div class="graphic-poly poly-yellow"></div>
+            </div>
+
+            <div class="home-cta">
+              <button class="cta-box" onclick="switchPage('games')">
+                <span class="cta-text">CHECK OUT MY GAMES</span>
+                <span class="cta-arrow">▶</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT PAGE -->
+      <div class="page" id="about">
+        <div class="page-content">
+          <div class="page-header">
+            <h2 class="page-title">ABOUT ME</h2>
+            <div class="page-subtitle">// WHO AM I? //</div>
+          </div>
+
+          <div class="about-content">
+            <div class="info-panel">
+              <div class="panel-header">
+                <span class="panel-icon">▶</span>
+                <span class="panel-title">THE DEVELOPER</span>
+              </div>
+              <div class="panel-body">
+                <p>Yo! I'm an indie game developer who loves creating unique experiences. From concept to code, I handle it all. My passion is bringing wild ideas to life through interactive media.</p>
+                <p>Currently working with Godot Engine, but always exploring new tools and techniques to level up my craft.</p>
+              </div>
+            </div>
+
+            <div class="skills-grid">
+              <div class="skill-box">
+                <div class="skill-icon">🎮</div>
+                <div class="skill-title">GAME DESIGN</div>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-box">
+                <div class="skill-icon">💻</div>
+                <div class="skill-title">PROGRAMMING</div>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-box">
+                <div class="skill-icon">🎨</div>
+                <div class="skill-title">VISUAL DESIGN</div>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-box">
+                <div class="skill-icon">🔊</div>
+                <div class="skill-title">SOUND DESIGN</div>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tools-section">
+              <div class="tools-header">
+                <span class="tools-icon">⚡</span>
+                <span class="tools-title">MY TOOLKIT</span>
+              </div>
+              <div class="tools-tags">
+                <span class="tool-tag">GODOT</span>
+                <span class="tool-tag">UNITY</span>
+                <span class="tool-tag">GDSCRIPT</span>
+                <span class="tool-tag">C#</span>
+                <span class="tool-tag">BLENDER</span>
+                <span class="tool-tag">ASEPRITE</span>
+                <span class="tool-tag">GIT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GAMES PAGE -->
+      <div class="page" id="games">
+        <div class="page-content">
+          <div class="page-header">
+            <h2 class="page-title">MY GAMES</h2>
+            <div class="page-subtitle">// PLAYABLE PORTFOLIO //</div>
+          </div>
+
+          <div class="games-list">
+            
+            <!-- Game Entry 1 - Eco Taxi -->
+            <div class="game-entry">
+              <div class="game-header">
+                <div class="game-number">001</div>
+                <div class="game-title-box">
+                  <h3 class="game-title">ECO TAXI</h3>
+                  <div class="game-tags">
+                    <span class="game-tag tag-godot">GODOT</span>
+                    <span class="game-tag tag-driving">DRIVING</span>
+                    <span class="game-tag tag-arcade">ARCADE</span>
+                  </div>
+                </div>
+              </div>
+              <div class="game-body">
+                <div class="game-embed">
+                  <iframe
+                    src="https://html.itch.zone/html/13352774/Eco_Taxi/index.html"
+                    width="100%"
+                    height="480"
+                    frameborder="0"
+                    scrolling="no"
+                    allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share">
+                  </iframe>
+                </div>
+                <div class="game-info">
+                  <p class="game-desc">Navigate the city streets in this eco-friendly taxi driving experience. Pick up passengers, complete missions, and keep the streets green!</p>
+                  <a href="https://itch.io/yourgame" class="game-link" target="_blank">
+                    <span>PLAY ON ITCH.IO</span>
+                    <span class="link-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Game Entry 2 - Coming Soon -->
+            <div class="game-entry">
+              <div class="game-header">
+                <div class="game-number">002</div>
+                <div class="game-title-box">
+                  <h3 class="game-title">PROJECT NEON</h3>
+                  <div class="game-tags">
+                    <span class="game-tag tag-wip">IN DEV</span>
+                  </div>
+                </div>
+              </div>
+              <div class="game-body">
+                <div class="game-placeholder">
+                  <div class="placeholder-content">
+                    <div class="placeholder-icon">⚠</div>
+                    <div class="placeholder-text">COMING SOON</div>
+                    <div class="placeholder-subtext">Currently in development...</div>
+                  </div>
+                </div>
+                <div class="game-info">
+                  <p class="game-desc">A new project is in the works. Stay tuned for updates on this exciting new game experience!</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Game Entry 3 - Coming Soon -->
+            <div class="game-entry">
+              <div class="game-header">
+                <div class="game-number">003</div>
+                <div class="game-title-box">
+                  <h3 class="game-title">FUTURE TITLE</h3>
+                  <div class="game-tags">
+                    <span class="game-tag tag-wip">CONCEPT</span>
+                  </div>
+                </div>
+              </div>
+              <div class="game-body">
+                <div class="game-placeholder">
+                  <div class="placeholder-content">
+                    <div class="placeholder-icon">💡</div>
+                    <div class="placeholder-text">BRAINSTORMING</div>
+                    <div class="placeholder-subtext">Ideas are flowing...</div>
+                  </div>
+                </div>
+                <div class="game-info">
+                  <p class="game-desc">More games are on the horizon. The creative process never stops!</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT PAGE -->
+      <div class="page" id="contact">
+        <div class="page-content">
+          <div class="page-header">
+            <h2 class="page-title">CONTACT</h2>
+            <div class="page-subtitle">// LET'S CONNECT //</div>
+          </div>
+
+          <div class="contact-content">
+            <div class="contact-intro">
+              <p class="contact-text">Got a project idea? Want to collaborate? Just want to chat about games?</p>
+              <p class="contact-text highlight">HIT ME UP!</p>
+            </div>
+
+            <div class="contact-grid">
+              <a href="https://itch.io/yourprofile" class="contact-box" target="_blank">
+                <div class="contact-icon">🎮</div>
+                <div class="contact-label">ITCH.IO</div>
+                <div class="contact-handle">@yourhandle</div>
+                <div class="contact-corner"></div>
+              </a>
+
+              <a href="https://github.com/yourhandle" class="contact-box" target="_blank">
+                <div class="contact-icon">💻</div>
+                <div class="contact-label">GITHUB</div>
+                <div class="contact-handle">@yourhandle</div>
+                <div class="contact-corner"></div>
+              </a>
+
+              <a href="https://twitter.com/yourhandle" class="contact-box" target="_blank">
+                <div class="contact-icon">🐦</div>
+                <div class="contact-label">TWITTER</div>
+                <div class="contact-handle">@yourhandle</div>
+                <div class="contact-corner"></div>
+              </a>
+
+              <a href="mailto:your.email@example.com" class="contact-box">
+                <div class="contact-icon">📧</div>
+                <div class="contact-label">EMAIL</div>
+                <div class="contact-handle">your.email@example.com</div>
+                <div class="contact-corner"></div>
+              </a>
+
+              <a href="https://discord.gg/yourserver" class="contact-box" target="_blank">
+                <div class="contact-icon">💬</div>
+                <div class="contact-label">DISCORD</div>
+                <div class="contact-handle">YourName#0000</div>
+                <div class="contact-corner"></div>
+              </a>
+
+              <a href="https://youtube.com/@yourchannel" class="contact-box" target="_blank">
+                <div class="contact-icon">📺</div>
+                <div class="contact-label">YOUTUBE</div>
+                <div class="contact-handle">@yourchannel</div>
+                <div class="contact-corner"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-text">© 2024 YOUR NAME // BUILT WITH ❤️ & CAFFEINE</div>
+      <div class="footer-accent"></div>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript for tab switching -->
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const pages = document.querySelectorAll('.page');
+
+    function switchPage(pageId) {
+      // Remove active class from all tabs and pages
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      pages.forEach(page => page.classList.remove('active'));
+
+      // Add active class to selected tab and page
+      const selectedTab = document.querySelector(`[data-page="${pageId}"]`);
+      const selectedPage = document.getElementById(pageId);
+      
+      if (selectedTab) selectedTab.classList.add('active');
+      if (selectedPage) selectedPage.classList.add('active');
+    }
+
+    // Add click handlers to tab buttons
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pageId = btn.getAttribute('data-page');
+        switchPage(pageId);
+      });
+    });
+
+    // Make switchPage available globally for inline onclick
+    window.switchPage = switchPage;
+  </script>
+
 </body>
 </html>
