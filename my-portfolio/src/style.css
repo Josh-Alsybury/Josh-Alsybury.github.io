@@ -1,20 +1,18 @@
 /* Global reset + base */
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: #0a0a18;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color: #f5f5ff;
+  height: 100%;
+  width: 100%;
+  background: black;
 }
-
-/* Three.js canvas should fill the screen */
 
 canvas {
   display: block;
 }
+
 
 /* We don’t need Vite’s centered #app layout anymore */
 
@@ -75,4 +73,15 @@ a:hover {
 #panel-content {
   font-size: 0.9rem;
   line-height: 1.4;
+}
+
+#ui-root::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, #000 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 999;
 }
